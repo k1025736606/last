@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+<!--userMapper+addUser:
+namespace:功能类似java开发中package
+-->
+<mapper namespace="userMapper">
+    <!--
+    parameterType:指定参数的数据类型（类的完整类名）。可以省略
+    sql语句中：mybatis使用 井{},表示占位符。占位符中需要写参数类型的属性名
+
+-->
+    <insert id="addUser" parameterType="com.User">
+        insert into t_user values (null,#{name},#{gender})
+    </insert>
+</mapper>
